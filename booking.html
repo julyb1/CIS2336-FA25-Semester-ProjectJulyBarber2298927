@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Book a Room — University of Houston at Sugar Land Student Center</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="brand">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/8/81/UH_logo.svg" alt="UH logo" />
+      <div>
+        <h1>University of Houston at Sugar Land Student Center</h1>
+        <p class="tag">A locale for students, events, and community.</p>
+      </div>
+    </div>
+
+    <nav id="site-nav" class="nav" aria-label="Main navigation">
+      <button id="nav-toggle" class="nav-toggle" aria-expanded="false" aria-controls="nav-list">Menu ☰</button>
+      <ul id="nav-list" class="nav-list">
+        <li><a href="index.html" data-nav>Home</a></li>
+        <li><a href="about.html" data-nav>About</a></li>
+        <li><a href="events.html" data-nav>Events</a></li>
+        <li><a href="faq.html" data-nav>FAQ</a></li>
+        <li><a href="booking.html" data-nav>Book a Room</a></li>
+        <li><a href="eat.html" data-nav>Campus Eats</a></li>
+        <li><a href="contact.html" data-nav>Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container">
+    <h2>Book a Room</h2>
+    <p class="lead">Select a room, pick a date and time, and submit your request. This demo uses client-side availability simulation unless a backend is connected.</p>
+
+    <form id="booking-form" novalidate>
+      <div class="form-grid">
+        <label for="room">Select Room</label>
+        <select id="room" name="room" required>
+          <option value="">--Choose a room--</option>
+          <option value="R101">R101 — Small Study (up to 6)</option>
+          <option value="R201">R201 — Group Room (up to 12)</option>
+          <option value="R301">R301 — Conference (up to 20)</option>
+          <option value="R401">R401 — Multi-Purpose (up to 40)</option>
+          <option value="AUD">AUD — Auditorium</option>
+        </select>
+
+        <label for="date">Date</label>
+        <input id="date" name="date" type="date" required />
+
+        <label for="start">Start time</label>
+        <input id="start" name="start" type="time" required />
+
+        <label for="end">End time</label>
+        <input id="end" name="end" type="time" required />
+
+        <label for="name">Your name</label>
+        <input id="name" name="name" type="text" minlength="2" required />
+
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" required />
+      </div>
+
+      <div class="form-actions">
+        <button type="submit" class="btn primary">Request Booking</button>
+        <button type="reset" class="btn ghost">Clear</button>
+      </div>
+
+      <div id="form-message" role="status" aria-live="polite" class="form-message"></div>
+    </form>
+
+      
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <p>University of Houston — Sugar Land Student Center </p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

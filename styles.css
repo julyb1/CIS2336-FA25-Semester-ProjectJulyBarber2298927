@@ -125,6 +125,16 @@ input,select,textarea{width:100%;padding:0.55rem;border-radius:8px;border:1px so
 .contact-grid{display:grid;grid-template-columns:1fr 340px;gap:1rem;align-items:start}
 .map-placeholder img{width:100%;border-radius:8px;object-fit:cover}
 
+/* images for eat.html*/
+.eat-page img {
+  max-width: 90%;
+  height: auto;
+  display: block;
+  margin: 20px auto;
+  border-radius: 10px;
+
+}
+
 /* footer */
 .site-footer{margin-top:1.25rem;background:#fff;padding:1rem;border-radius:10px;border-top:3px solid rgba(47,93,80,0.06)}
 .footer-grid{display:flex;gap:2rem;justify-content:space-between;align-items:flex-start}
